@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserModel {
+  name: String!
+  email: String!
+  account: AccountModel!
+}
+
+type AccountModel {
+  number: String!
+}
+
+type Query {
+  user: [UserModel!]!
+}
+
+type Mutation {
+  createUser(data: CreateUserInput!): UserModel!
+}
+
+input CreateUserInput {
+  name: String!
+  email: String!
+}
